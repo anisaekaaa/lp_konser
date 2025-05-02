@@ -7,9 +7,9 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    background-color: #388dff;
+    background-color: #3b41e0;
     padding: 20px;
-    color: white;
+    color: rgb(125, 167, 225);
 }
 
 header .header-left h1 {
@@ -28,29 +28,41 @@ header .header-right li {
 }
 
 header .header-right a {
-    color: #569fff;
+    color: #c1dbf4;
     text-decoration: none;
     font-weight: bold;
 }
 
 header .header-right a:hover {
-    color: #0069f4;
+    color: #093260;
 }
 
 .intro {
     text-align: center;
     padding: 50px 0;
-    background-color: white;
+    background-image: url("C:/xampp/htdocs/lp_konser/bg.webp");
+    background-size: cover;
+    background-position : center;
 }
 
 .intro h2 {
-    font-size: 36px;
-    color: #388dff;
+    font-size: 48px;
+    color: #0d3b76;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    margin-bottom: 20px;
 }
 
 .intro p {
     font-size: 24px;
     color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    display: inline-block;
+    max-width: 80%;
+    word-wrap: break-word;
 }
 
 .artis {
@@ -70,7 +82,7 @@ header .header-right a:hover {
 
 .artis h3 {
     text-align: center;
-    color: #388dff;
+    color: #104b98;
 }
 
 .tiket {
@@ -97,7 +109,7 @@ table th, table td {
 }
 
 table th {
-    background-color: #388dff;
+    background-color: #1124f1;
     color: white;
 }
 
@@ -110,11 +122,11 @@ table td a {
 }
 
 table td a:hover {
-    background-color: #0069f4;
+    background-color: #0c7ec5;
 }
 
 .informasi {
-    background-color: #6ec1e4;
+    background-color: #1558cd;
     text-align: center;
     padding: 40px;
     color: white;

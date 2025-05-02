@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pilih Kursi Konser</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: #003366;
+      color: white;
+      padding: 20px 0;
+      margin: 0;
+    }
+
+    .legend {
+      margin: 20px;
+    }
+
+    .legend span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .reguler { background-color: #90ee90; }
+    .vip { background-color: #fdd835; }
+    .vvip { background-color: #ff8a80; }
+    .taken { background-color: #555 !important; cursor: not-allowed; opacity: 0.6; }
+
+    .stage {
+      background-color: #222;
+      color: white;
+      padding: 10px;
+      margin: 20px auto;
+      width: 80%;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .seat-map {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .seat {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    .seat:checked {
+      outline: 2px solid #000;
+    }
+
+    .seat.reguler { background-color: #90ee90; }
+    .seat.vip { background-color: #fdd835; }
+    .seat.vvip { background-color: #ff8a80; }
+
+    .space {
+      width: 60px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 30px;
+      background-color: #388dff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0069f4;
+    }
+
+    .back-link {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      background-color: #ccc;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .back-link:hover {
+      background-color: #999;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulir Pemesanan Kursi</h1>
+
+  <div class="legend">
+    <p>
+      <span class="reguler"></span> REGULER &nbsp;
+      <span class="vip"></span> VIP &nbsp;
+      <span class="vvip"></span> VVIP &nbsp;
+      <span class="taken"></span> TERISI
+    </p>
+  </div>
+
+  <div class="stage">PANGGUNG</div>
+
+  <form action="proses_formulir.html" method="post">
+    <div class="seat-map">
+      <!-- VVIP (2 x 6) -->
+      <div class="row">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="A1">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="A2">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="A3">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="A4">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="A5">
+        <div class="space"></div>
+        <input type="checkbox" class="seat vvip" name="seat[]" value="A6">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="A7">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="A8">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="A9">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="A10">
+      </div>
+      <div class="row">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="B1">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="B2">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="B3">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="B4">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="B5">
+        <div class="space"></div>
+        <input type="checkbox" class="seat vvip" name="seat[]" value="B6">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="B7">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="B8">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="B9">
+        <input type="checkbox" class="seat vvip" name="seat[]" value="B10">
+      </div>
+
+      <!-- VIP (3 x 8) -->
+      <div class="row">
+        <input type="checkbox" class="seat vip" name="seat[]" value="C1">
+        <input type="checkbox" class="seat vip" name="seat[]" value="C2">
+        <input type="checkbox" class="seat vip" name="seat[]" value="C3">
+        <input type="checkbox" class="seat vip" name="seat[]" value="C4">
+        <input type="checkbox" class="seat vip" name="seat[]" value="C5">
+        <div class="space"></div>
+        <input type="checkbox" class="seat vip" name="seat[]" value="C6">
+        <input type="checkbox" class="seat vip" name="seat[]" value="C7">
+        <input type="checkbox" class="seat vip" name="seat[]" value="C8">
+        <input type="checkbox" class="seat vip" name="seat[]" value="C9">
+        <input type="checkbox" class="seat vip" name="seat[]" value="C10">
+      </div>
+      <div class="row">
+        <input type="checkbox" class="seat vip" name="seat[]" value="D1">
+        <input type="checkbox" class="seat vip" name="seat[]" value="D2">
+        <input type="checkbox" class="seat vip" name="seat[]" value="D3">
+        <input type="checkbox" class="seat vip" name="seat[]" value="D4">
+        <input type="checkbox" class="seat vip" name="seat[]" value="D5">
+        <div class="space"></div>
+        <input type="checkbox" class="seat vip" name="seat[]" value="D6">
+        <input type="checkbox" class="seat vip" name="seat[]" value="D7">
+        <input type="checkbox" class="seat vip" name="seat[]" value="D8">
+        <input type="checkbox" class="seat vip" name="seat[]" value="D9">
+        <input type="checkbox" class="seat vip" name="seat[]" value="D10">
+      </div>
+      <div class="row">
+        <input type="checkbox" class="seat vip" name="seat[]" value="E1">
+        <input type="checkbox" class="seat vip" name="seat[]" value="E2">
+        <input type="checkbox" class="seat vip" name="seat[]" value="E3">
+        <input type="checkbox" class="seat vip" name="seat[]" value="E4">
+        <input type="checkbox" class="seat vip" name="seat[]" value="E5">
+        <div class="space"></div>
+        <input type="checkbox" class="seat vip" name="seat[]" value="E6">
+        <input type="checkbox" class="seat vip" name="seat[]" value="E7">
+        <input type="checkbox" class="seat vip" name="seat[]" value="E8">
+        <input type="checkbox" class="seat vip" name="seat[]" value="E9">
+        <input type="checkbox" class="seat vip" name="seat[]" value="E10">
+      </div>
+
+      <!-- REGULER (4 x 10) -->
+      <div class="row">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="F1">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="F2">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="F3">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="F4">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="F5">
+        <div class="space"></div>
+        <input type="checkbox" class="seat reguler" name="seat[]" value="F6">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="F7">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="F8">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="F9">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="F10">
+      </div>
+      <div class="row">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="G1">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="G2">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="G3">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="G4">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="G5">
+        <div class="space"></div>
+        <input type="checkbox" class="seat reguler" name="seat[]" value="G6">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="G7">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="G8">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="G9">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="G10">
+      </div>
+      <div class="row">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="H1">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="H2">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="H3">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="H4">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="H5">
+        <div class="space"></div>
+        <input type="checkbox" class="seat reguler" name="seat[]" value="H6">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="H7">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="H8">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="H9">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="H10">
+      </div>
+      <div class="row">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="I1">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="I2">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="I3">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="I4">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="I5">
+        <div class="space"></div>
+        <input type="checkbox" class="seat reguler" name="seat[]" value="I6">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="I7">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="I8">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="I9">
+        <input type="checkbox" class="seat reguler" name="seat[]" value="I10">
+      </div>
+    </div>
+
+    <button type="submit">Pesan Sekarang</button>
+
+    <div>
+      <a href="struktur.html" class="back-link">Kembali ke Beranda</a>
+    </div>
+  </form>
+</body>
+</html>
